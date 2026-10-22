@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ariandy Vargas, M. Sc. | Físico & Analista Cuantitativo</title>
+    <!-- CSS de FontAwesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #1B365D;
+            --secondary: #304263;
+            --accent: #2563eb;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .header-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        @media (min-width: 768px) {
+            .header-container {
+                flex-direction: row;
+                text-align: left;
+            }
+        }
+
+        .profile-img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+
+        .header-text h1 {
+            font-size: 2.2rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .header-text h2 {
+            font-size: 1.2rem;
+            color: #93c5fd;
+            font-weight: 400;
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        @media (min-width: 768px) {
+            .contact-links {
+                justify-content: flex-start;
+            }
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 0.9rem;
+            background: rgba(255,255,255,0.1);
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: var(--accent);
+        }
+
+        /* Layout Main */
+        container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 850px) {
+            container {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        section {
+            background: white;
+            padding: 1.8rem;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
+        }
+
+        h3.section-title {
+            color: var(--primary);
+            font-size: 1.3rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* Timeline Items */
+        .timeline-item {
+            margin-bottom: 1.5rem;
+            position: relative;
+            padding-left: 1rem;
+            border-left: 2px solid #e2e8f0;
+        }
+
+        .timeline-item h4 {
+            font-size: 1.1rem;
+            color: var(--text-dark);
+        }
+
+        .timeline-item .institution {
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+
+        .timeline-item .date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-item ul {
+            margin-left: 1.2rem;
+            font-size: 0.95rem;
+        }
+
+        /* Galería de Imágenes en Proyectos/Máster */
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .gallery-card {
+            border: 1px solid #e2e8f0;
+            border-radius: 6px;
+            overflow: hidden;
+            background: #fff;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s;
+        }
+
+        .gallery-card img:hover {
+            transform: scale(1.03);
+        }
+
+        .gallery-card p {
+            padding: 0.5rem;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-align: center;
+        }
+
+        /* Badges de Habilidades */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-badge {
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Cabecera -->
+    <header>
+        <div class="header-container">
+            <!-- Reemplaza 'Foto_cv_soria.jpg' con el nombre de tu foto en GitHub -->
+            <img src="Foto_cv_soria.jpg" alt="Ariandy Vargas" class="profile-img" onerror="this.src='https://via.placeholder.com/160'">
+            <div class="header-text">
+                <h1>Ariandy Vargas, M. Sc.</h1>
+                <h2>Físico | Analista Cuantitativo & Científico de Datos</h2>
+                <div class="contact-links">
+                    <a href="mailto:ariandyvargasj@gmail.com"><i class="fas fa-envelope"></i> Email</a>
+                    <a href="https://www.linkedin.com/in/ariandy-vargas-30b59b186" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                    <a href="https://orcid.org/0009-0003-8321-9621" target="_blank"><i class="fas fa-id-card"></i> ORCID</a>
+                    <a href="#"><i class="fas fa-map-marker-alt"></i> Santo Domingo, R.D.</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Contenido Principal -->
+    <container>
+        <!-- Columna Izquierda (Principal) -->
+        <main>
+            <!-- Perfil -->
+            <section>
+                <h3 class="section-title"><i class="fas fa-user"></i> Perfil Profesional</h3>
+                <p>Físico con Maestría en Física de Materiales e interés sólido en el análisis, procesamiento y modelado cuantitativo de datos. Experiencia comprobada en docencia universitaria, investigación aplicada y simulación de sistemas complejos. Dominio práctico de lenguajes de programación y herramientas de análisis estadístico como Python, SQL, R y redes neuronales.</p>
+            </section>
+
+            <!-- Educación con Galería de Imágenes -->
+            <section>
+                <h3 class="section-title"><i class="fas fa-graduation-cap"></i> Educación Superior</h3>
+                
+                <!-- Máster -->
+                <div class="timeline-item">
+                    <h4>Máster en Física (Especialidad Física de Materiales)</h4>
+                    <div class="institution">Universidad de Valladolid — España</div>
+                    <div class="date">2023 – 2024 (Beca Fundación Carolina)</div>
+                    <p><strong>TFM:</strong> <em>Estudio de propiedades estructurales y dinámicas del hierro líquido a altas presiones y temperatura mediante simulaciones de primeros principios y redes neuronales.</em></p>
+                    
+                    <!-- Galería de fotos del Máster -->
+                    <div class="image-gallery">
+                        <div class="gallery-card">
+                            <!-- Reemplaza 'master_1.jpg' con tu imagen guardada en el repositorio -->
+                            <img src="master_1.jpg" alt="Universidad de Valladolid" onerror="this.src='https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400'">
+                            <p>Universidad de Valladolid, España</p>
+                        </div>
+                        <div class="gallery-card">
+                            <!-- Reemplaza 'master_2.jpg' con tu segunda imagen -->
+                            <img src="master_2.jpg" alt="Simulación TFM" onerror="this.src='https://images.unsplash.com/photo-1507668077129-56e32842fceb?w=400'">
+                            <p>Modelado con Redes Neuronales</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Licenciatura -->
+                <div class="timeline-item">
+                    <h4>Licenciatura en Física</h4>
+                    <div class="institution">Universidad Autónoma de Santo Domingo (UASD)</div>
+                    <div class="date">2014 – 2022</div>
+                    <p><strong>Tesis:</strong> Obtención experimental de isotermas de adsorción de metanol y parámetros de la ecuación Dubinin-Astakhov para carbones microporosos.</p>
+                </div>
+            </section>
+
+            <!-- Experiencia Laboral -->
+            <section>
+                <h3 class="section-title"><i class="fas fa-briefcase"></i> Experiencia Laboral</h3>
+                
+                <div class="timeline-item">
+                    <h4>Docente Contratado de Física</h4>
+                    <div class="institution">Universidad Autónoma de Santo Domingo (UASD)</div>
+                    <div class="date">Agosto 2026 – Presente</div>
+                    <ul>
+                        <li>Impartición de la asignatura Física Básica y desarrollo de materiales didácticos STEM.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Docente de Física</h4>
+                    <div class="institution">Universidad Católica de Santo Domingo (UCSD)</div>
+                    <div class="date">Mayo 2026 – Presente</div>
+                    <ul>
+                        <li>Impartición de la asignatura Física y Electroacústica con énfasis en herramientas computacionales.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Docente de Física y Matemáticas</h4>
+                    <div class="institution">Instituto Técnico Superior Comunitario (ITSC)</div>
+                    <div class="date">Agosto 2025 – Presente</div>
+                    <ul>
+                        <li>Impartición de Cálculo Diferencial, Cálculo Integral y Física Aplicada.</li>
+                    </ul>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Técnico de Laboratorio</h4>
+                    <div class="institution">Instituto Técnico Superior Comunitario (ITSC)</div>
+                    <div class="date">Octubre 2021 – Presente</div>
+                    <ul>
+                        <li>Gestión operativa, logística y soporte administrativo en laboratorios de física.</li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <!-- Columna Derecha (Lateral) -->
+        <aside>
+            <!-- Habilidades -->
+            <section>
+                <h3 class="section-title"><i class="fas fa-code"></i> Competencias</h3>
+                <div class="skills-list">
+                    <span class="skill-badge">Python</span>
+                    <span class="skill-badge">Pandas / NumPy</span>
+                    <span class="skill-badge">SQL</span>
+                    <span class="skill-badge">R</span>
+                    <span class="skill-badge">Redes Neuronales</span>
+                    <span class="skill-badge">MS Excel Avanzado</span>
+                    <span class="skill-badge">Tableau</span>
+                    <span class="skill-badge">Prompt Engineering</span>
+                </div>
+            </section>
+
+            <!-- Certificaciones -->
+            <section>
+                <h3 class="section-title"><i class="fas fa-certificate"></i> Certificaciones</h3>
+                <ul style="font-size: 0.9rem; margin-left: 1rem;">
+                    <li><strong>Google AI Essentials</strong> (Coursera, 2026)</li>
+                    <li><strong>Python for Everybody</strong> (Univ. of Michigan, 2025)</li>
+                    <li><strong>Análisis de Datos de Google</strong> (Coursera, 2023)</li>
+                    <li><strong>Excel Avanzado</strong> (Univ. Austral, 2023)</li>
+                </ul>
+            </section>
+
+            <!-- Reconocimientos -->
+            <section>
+                <h3 class="section-title"><i class="fas fa-award"></i> Reconocimientos</h3>
+                <ul style="font-size: 0.9rem; margin-left: 1rem;">
+                    <li><strong>Carrera Nacional de Investigadores</strong> (MESCyT)</li>
+                    <li><strong>Beca Fundación Carolina</strong> (España, 2023)</li>
+                    <li><strong>Miembro SODOFI</strong> (Sociedad Dominicana de Física)</li>
+                </ul>
+            </section>
+        </aside>
+    </container>
+
+    <footer>
+        <p>&copy; 2026 Ariandy Vargas. Alojado orgullosamente en GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
